@@ -210,19 +210,19 @@ function App() {
             <div className="hero-photo">
               <img
                 className="hero-image-main"
-                src="/images/child-speaking.jpg"
+                src={`${import.meta.env.BASE_URL}images/child-speaking.jpg`}
                 alt="बोलते समय परेशानी महसूस कर रहे बच्चे की तस्वीर"
                 fetchPriority="high"
               />
               <img
                 className="hero-image-poster"
-                src="/images/parent-child-guidance.jpg"
+                src={`${import.meta.env.BASE_URL}images/parent-child-guidance.jpg`}
                 alt="बच्चे के साथ बातचीत करती माँ और speech support से जुड़ी जानकारी"
                 fetchPriority="high"
               />
               <img
                 className="hero-image-language"
-                src="/images/speech-language-support.avif"
+                src={`${import.meta.env.BASE_URL}images/speech-language-support.avif`}
                 alt="कक्षा में शब्दों के साथ अभ्यास करता बच्चा"
                 fetchPriority="high"
               />
@@ -404,7 +404,7 @@ function App() {
             <div className="guidance-layout">
               <figure className="doctor-card">
                 <img
-                  src="/images/doctor-guidance.jpg"
+                  src={`${import.meta.env.BASE_URL}images/doctor-guidance.jpg`}
                   alt="स्वास्थ्य पेशेवर की सांकेतिक stock photo"
                   loading="lazy"
                 />
