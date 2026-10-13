@@ -26,9 +26,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Install dependencies
         run: npm install
+
+      - name: Fix Vite executable permission
+        run: chmod +x node_modules/.bin/vite
 
       - name: Build React + Vite project
         run: npm run build
@@ -40,10 +44,10 @@ jobs:
 
   deploy:
     needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
